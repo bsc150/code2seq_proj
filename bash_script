@@ -1,0 +1,12 @@
+#!/bin/bash
+rm res_file
+FILES=/home/student/angr/coreutils-8.28/src/*
+for f in $FILES
+do
+    if [[ -x "$f" ]]
+    then
+        echo "Processing $f file..."
+        # take action on each file. $f store current file name
+        python /home/student/script.py $f
+    fi
+done
