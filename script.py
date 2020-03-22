@@ -7,8 +7,14 @@ def write_binary(binary_path):
     project = angr.Project(binary_path, load_options={'auto_load_libs':False})
     cfg = project.analyses.CFG(fail_fast=True) # note: this is a fixed CFG, consider giving it as a parameter instead
     # return [(addr, func.name) for addr, func in cfg.kb.functions.items()]
-    return [(hex(addr), func.name) for addr, func in cfg.kb.functions.items() if func.name == "main"]
+    return [(hex(addr), func.name) for addr, func in cfg.kb.functions.items() if is_qualified(func)]
 
+	
+def is_qualified(symbol):
+    avoid = {'main', 'usage'}
+    return symbol.is_function and symbol.is_export and not (symbol.name.startswith("_") or symbol.name in avoid)
+
+	
 def main():
     assert(len(sys.argv) > 1)
     return write_binary(sys.argv[1])
