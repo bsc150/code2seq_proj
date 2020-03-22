@@ -1,1 +1,1 @@
-# code2sec_proj 
+# code2seq_proj 
