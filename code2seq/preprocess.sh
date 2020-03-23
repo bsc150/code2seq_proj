@@ -30,9 +30,9 @@ TARGET_VOCAB_SIZE=26347
 PYTHON=python
 ###########################################################
 
-TRAIN_DATA_FILE=${DATASET_NAME}.train.raw.txt
-VAL_DATA_FILE=${DATASET_NAME}.val.raw.txt
-TEST_DATA_FILE=${DATASET_NAME}.test.raw.txt
+TRAIN_DATA_FILE=data/${DATASET_NAME}/${DATASET_NAME}.train.raw.txt
+VAL_DATA_FILE=data/${DATASET_NAME}/${DATASET_NAME}.val.raw.txt
+TEST_DATA_FILE=data/${DATASET_NAME}/${DATASET_NAME}.test.raw.txt
 
 mkdir -p data
 mkdir -p data/${DATASET_NAME}
