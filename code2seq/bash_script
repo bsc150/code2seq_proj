@@ -1,12 +1,18 @@
 #!/bin/bash
 # FILES: the location of cureutils' binaries
-FILES=/home/plumaya/project/coreutils-8.28/src/*
+FILES=../coreutils_src/*
+DESTDIR = ../coreutils_src/preprocessed
+mkdir $DESTDIR
 for f in $FILES
 do
     if [[ -x "$f" ]]
     then
         echo "Processing $f file..."
         # take action on each file. $f store current file name
-        python3 preprocess.py $f
+        python3 our_preprocess.py ../coreutils_src/preprocessed/$f
+        #python3 our_preprocess_blocks.py ../coreutils_src/preprocessed/$f
+        #python3 our_preprocess_n_constraints.py ../coreutils_src/preprocessed/$f
     fi
 done
+
+cat $DESTDIR/* > output.txt
