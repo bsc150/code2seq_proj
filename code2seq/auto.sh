@@ -9,11 +9,11 @@ bash bash_script.sh
 
 # Step 2 (optional):
 # Run postprocess on the output file.
-# python3 postprocess output.txt
+# python3 our_postprocess.py output.txt newfilename
 
 # Step 3:
 # Create test, train, validation files (files created automatically will be located under "data/assembly/"
-python3 divide.py output.txt
+python3 split_data.py output.txt
 
 # Step 4:
 # Activate the network
