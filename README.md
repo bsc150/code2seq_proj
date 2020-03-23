@@ -1,13 +1,13 @@
 # code2seq_proj 
 
 ### how to run
-there is a auto.sh file in the code2seq directory that should run all of the preprocess of relevant to the project.
-in order to run it use:
+There is a auto.sh file in the code2seq directory that should run all of the preprocess of relevant to the project.
+In order to run it use:
 ```
 bash auto.sh
 ```
 
-explanation about the other files:
+Explanation about the other files:
 
 The code2seq directory is a clone of the code2seq github for comfort. Note that the github project is probably still in development so you might need to update it's content.
 
