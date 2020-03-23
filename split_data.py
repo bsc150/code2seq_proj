@@ -13,9 +13,9 @@ Divide data in file into 3 different files, train validation and test.
 Each function is decided to be in train,test,or validation, together with ALL it's possible flows.
 """
 def divide(file):
-    train_file = open("train.txt", 'w')
-    validation_file = open("val.txt", 'w')
-    test_file = open("test.txt", 'w')
+    train_file = open("data/assembly/assembly.train.raw.txt", 'w')
+    validation_file = open("data/assembly/assembly.val.raw.txt", 'w')
+    test_file = open("data/assembly/assembly.test.raw.txt", 'w')
     with open(file, 'r') as f:
         lines = f.readlines()
         last_line = None
