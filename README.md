@@ -15,7 +15,7 @@ our_preprocess.py: gets a file name as a parameter, and outputs a file that we w
 
 our_preprocess_blocks.py: acts the same as the previous file, except it does so while outputing a file with a different symbolic execution analisys (explained further in the report).
 
-Our_preprocess_n_constraints.py: acts the same as our_preprocess.py but outputs only the first n contraints instead of the while trace and constraints into the output file.
+our_preprocess_n_constraints.py: acts the same as our_preprocess.py but outputs only the first n contraints instead of the while trace and constraints into the output file.
 
 bash_script.py: runs our_preprocess.py for all of the executable files in a directory and groups all of the results in a single output file.
 
